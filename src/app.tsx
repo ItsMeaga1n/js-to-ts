@@ -1,11 +1,22 @@
-import React from "react";
+import React, {Component} from "react";
 import Js2Ts from "./components/js2Ts/Js2Ts";
 import { GlobalStyle } from "./components/globalStyles/globalStyles";
+import { Note } from "Types";
 const emptyFn = () => undefined;
 
-class App extends React.Component {
-  constructor() {
-    super();
+
+
+interface AppState {
+  notes: Note[][]
+}
+
+interface AppProps {
+  title: Title
+}
+
+class App extends Component<AppProps, AppState> {
+  constructor(props) {
+    super(props);
     this.state = {
       notes: new Array(88).fill([]),
     };
