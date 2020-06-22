@@ -40,7 +40,7 @@ class App extends Component<AppProps, AppState> {
     return (
       <div className="main">
         <GlobalStyle />
-        <h1>{"Js -> Ts"}</h1>
+        <h1>{this.props.title.content}</h1>
         <Js2Ts
           bitsNumber={8}
           onNoteClick={this.handleNoteClicked.bind(this)}
